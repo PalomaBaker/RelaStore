@@ -1,0 +1,26 @@
+{
+    "name": "relastore",
+    "version": "1.0.0",
+    "description": "e-commerce backend",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "seed": "node seeders/seed.js"
+    },
+    "keywords": [
+      "express",
+      "api",
+      "mysql",
+      "sequelize"
+    ],
+    "author": "Paloma Baker",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.17.1",
+      "mysql2": "^2.3.0",
+      "sequelize": "^6.13.0",
+      "dotenv": "^10.0.0"
+    }
+  }
+  
+  
