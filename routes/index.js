@@ -1,28 +1,16 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Category, Product, ProductTag, Tag } = require('../models/index.js');
+
+// Import route modules
+const categoryRoutes = require('./api/category-routes.js');
+const productRoutes = require('./api/product-routes.js');
+const tagRoutes = require('./api/tag-routes.js');
 
 // The `/api/categories` endpoint
+router.use('/category', categoryRoutes);
 
-router.get('/', (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
-});
-
-router.get('/:id', (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
-});
-
-router.post('/', (req, res) => {
-  // create a new category
-});
-
-router.put('/:id', (req, res) => {
-  // update a category by its `id` value
-});
-
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
-});
+// Define routes for products and tags
+router.use('/product', productRoutes);
+router.use('/tag', tagRoutes);
 
 module.exports = router;
